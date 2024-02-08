@@ -22,6 +22,7 @@ export default function SectionLoby(): JSX.Element {
             contentText={el.contentText}
             contentPriceText={el.contentPriceText}
             reverseElements={el.isReversed}
+            photosElements={el.photos}
           />
         );
       })}
