@@ -1,13 +1,15 @@
 $bottomMargin: 4.5px;
 
+
 .content_loby{
     display: flex;
     column-gap: 5vh;
-    
+
     .content_information{
         display: flex;
         flex-wrap: wrap;
-        align-content: space-between;
+        justify-content: space-between;
+        flex-direction: column;
         width: 50%;
     
         .content_title{
@@ -74,13 +76,13 @@ $bottomMargin: 4.5px;
     .content_pictures{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: space-between;
         width: 60%;
-        height: 100%;
 
         .big_img{
             width: 100%;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
         }
         .low_imgs{
             display: grid;

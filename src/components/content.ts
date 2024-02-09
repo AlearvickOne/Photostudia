@@ -61,7 +61,7 @@ export const contents = [
                          <p>`,
     isReversed: true,
     photos: [
-      { image: "/src/assets/contents/content/image_1.svg" },
+      { image: "/src/assets/contents/rain/image_1.svg" },
       { image: "/src/assets/contents/content/image_2.svg" },
       { image: "/src/assets/contents/content/image_3.svg" },
       { image: "/src/assets/contents/content/image_4.svg" },
@@ -95,7 +95,7 @@ export const contents = [
                         <p>Специальные условия для предпринимателей.<p>`,
     isReversed: false,
     photos: [
-      { image: "/src/assets/contents/content/image_1.svg" },
+      { image: "/src/assets/contents/cyclorama/image_1.svg" },
       { image: "/src/assets/contents/content/image_2.svg" },
       { image: "/src/assets/contents/content/image_3.svg" },
       { image: "/src/assets/contents/content/image_4.svg" },
@@ -126,7 +126,7 @@ export const contents = [
                         <p>Аренда под мероприятия и занятия на специальных условиях.<p>`,
     isReversed: true,
     photos: [
-      { image: "/src/assets/contents/content/image_1.svg" },
+      { image: "/src/assets/contents/interior/image_1.svg" },
       { image: "/src/assets/contents/content/image_2.svg" },
       { image: "/src/assets/contents/content/image_3.svg" },
       { image: "/src/assets/contents/content/image_4.svg" },
@@ -158,7 +158,7 @@ export const contents = [
                         <p>Мастер-классы, интервью, обучение, коворкинг на специальных условиях.<p>`,
     isReversed: false,
     photos: [
-      { image: "/src/assets/contents/content/image_1.svg" },
+      { image: "/src/assets/contents/loft/image_1.svg" },
       { image: "/src/assets/contents/content/image_2.svg" },
       { image: "/src/assets/contents/content/image_3.svg" },
       { image: "/src/assets/contents/content/image_4.svg" },
