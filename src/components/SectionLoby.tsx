@@ -4,7 +4,7 @@ import "./sectionLoby.scss";
 
 export default function SectionLoby(): JSX.Element {
   return (
-    <section>
+    <section className="section_loby-contents">
       <div className="section_title">
         <h1>ЗАЛЫ</h1>
         <h5>

@@ -1,12 +1,16 @@
-import Header from './components/Header/Header';
-import SectionLoby from './components/SectionLoby';
+import Header from "./components/Header/Header";
+import OtherZonesTitle from "./components/OtherZones/OtherZonesTitle";
+import OtherZonesContent from "./components/OtherZonesContent/OtherZonesContent";
+import SectionLoby from "./components/SectionLoby";
 
 function App() {
   return (
     <>
-      <Header></Header>
+      <Header />
       <main>
         <SectionLoby />
+        <OtherZonesTitle />
+        <OtherZonesContent />
       </main>
     </>
   );

@@ -40,7 +40,12 @@ function contentPictures(photosElements: { image: string }[]): JSX.Element {
       <img className="big_img" src={photosElements[0].image} alt="pic" />
       <div className="low_imgs">
         {photosElements.map((el, i) => {
-          if (i !== 0) return <img key={i} className="low_img" src={el.image} alt="" />;
+          if (i !== 0)
+            return (
+              <div className="low_img">
+                <img key={i} src={el.image} alt="lowImage" />
+              </div>
+            );
         })}
       </div>
     </div>

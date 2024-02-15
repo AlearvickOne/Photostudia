@@ -1,5 +1,8 @@
 $bottomMargin: 4.5px;
 
+.section_loby-contents{
+    margin-bottom: 5rem;
+}
 
 .content_loby{
     display: flex;
@@ -91,9 +94,16 @@ $bottomMargin: 4.5px;
 
             .low_img{
                 width: 100%;
-
+               
                 &:last-child{
                     margin-left: 0;
+                }
+
+                img{
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    object-position: 0 0;
                 }
             }
         }
