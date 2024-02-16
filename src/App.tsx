@@ -1,6 +1,6 @@
 import Header from "./components/Header/Header";
 import OtherZonesTitle from "./components/OtherZones/OtherZonesTitle";
-import OtherZonesContent from "./components/OtherZonesContent/OtherZonesContent";
+import OtherZonesContentLoby from "./components/OtherZonesContent/OtherZonesContentLoby";
 import SectionLoby from "./components/SectionLoby";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <main>
         <SectionLoby />
         <OtherZonesTitle />
-        <OtherZonesContent />
+        <OtherZonesContentLoby />
       </main>
     </>
   );

@@ -1,0 +1,32 @@
+$bottomMargin: 4.5px;
+
+.other_zones_content-section{
+    display: flex;
+    column-gap: 15vh;
+    margin-bottom: 3rem;
+    
+    .content_information {   
+        width: 50%;
+
+        h2{
+            margin-top: -1rem;
+            font-size: 4rem;
+            font-weight: 100;
+        }
+    
+        p{
+            margin-bottom: $bottomMargin;
+            line-height: 1.5rem;  
+        }
+    }
+
+    .content_photo-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+
+        img{
+            width: 100%;
+        }
+    }
+}
