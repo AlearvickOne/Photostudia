@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Carlito&display=swap');
 
+$margin_wrap: 7vh;
+
 *{
   box-sizing: border-box;
   padding: 0;
@@ -28,6 +30,10 @@ body{
   }
 
   section{
-    margin: 0 7vh;
+    margin: 0 $margin_wrap;
+  }
+
+  .hr_black{
+    border: 1px solid #000;
   }
 }

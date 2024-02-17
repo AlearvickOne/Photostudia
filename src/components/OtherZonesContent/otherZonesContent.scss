@@ -1,6 +1,6 @@
 $bottomMargin: 4.5px;
 
-.other_zones_content-section{
+.other_zone_content{
     display: flex;
     column-gap: 15vh;
     margin-bottom: 3rem;
@@ -8,12 +8,19 @@ $bottomMargin: 4.5px;
     .content_information {   
         width: 50%;
 
-        h2{
-            margin-top: -1rem;
-            font-size: 4rem;
-            font-weight: 100;
+        .content_info-title{
+            display: flex;
+            flex-wrap: nowrap;
+
+            h2{
+                margin-top: -1rem;
+                margin-right: 1rem;
+
+                font-size: 4rem;
+                font-weight: 100;
+            }
         }
-    
+
         p{
             margin-bottom: $bottomMargin;
             line-height: 1.5rem;  

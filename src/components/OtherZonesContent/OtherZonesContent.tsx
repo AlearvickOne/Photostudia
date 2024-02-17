@@ -1,38 +1,38 @@
+import { IContent } from "../interfaces";
 import "./otherZonesContent.scss";
 
-import image_1 from "../../assets/otherZonesContents/makeUpRoom/image_1.svg";
-import image_2 from "../../assets/otherZonesContents/makeUpRoom/image_2.svg";
-
-interface IContent {
-  isReversed: boolean;
-}
-
-function contentInformation(): JSX.Element {
+function contentInformation(title: string, text: string): JSX.Element {
   return (
     <div className="content_information">
-      <h2>ГРИМЕРНАЯ</h2>
-      <p>
-        Два рабочих места со всем необходимым. Есть отпариватель, <br />
-        утюг и рейлы для одежды.
-      </p>
+      <div className="content_info-title" dangerouslySetInnerHTML={{ __html: title }} />
+      <div className="content_info-text" dangerouslySetInnerHTML={{ __html: text }} />
     </div>
   );
 }
 
-function contentPhotoGrid(): JSX.Element {
+function contentPhotoGrid(photos: { image: string }[]): JSX.Element {
   return (
     <div className="content_photo-grid">
-      <img src={image_1} alt="img1" />
-      <img src={image_2} alt="img2" />
+      {photos.map((el, i) => (
+        <img key={i} src={el.image} />
+      ))}
     </div>
   );
 }
 
-export default function OtherZonesContent({ isReversed }: IContent): JSX.Element {
+export default function OtherZonesContent({
+  contentTitle,
+  contentText,
+  reverseElements,
+  photosElements,
+}: IContent): JSX.Element {
+  const contentInfo = contentInformation(contentTitle, contentText);
+  const contentPhoto = contentPhotoGrid(photosElements);
+
   return (
-    <section className="other_zones_content-section">
-      {isReversed ? contentPhotoGrid() : contentInformation()}
-      {isReversed ? contentInformation() : contentPhotoGrid()}
-    </section>
+    <div className="other_zone_content">
+      {reverseElements ? contentPhoto : contentInfo}
+      {reverseElements ? contentInfo : contentPhoto}
+    </div>
   );
 }

@@ -1,14 +1,7 @@
+import { IContent } from "../interfaces";
 import "./contentLoby.scss";
 
 import { Link } from "react-router-dom";
-
-interface IContent {
-  contentTitle: string;
-  contentText: string;
-  contentPriceText: string;
-  reverseElements: boolean;
-  photosElements: { image: string }[];
-}
 
 function contentInformation(
   contentTitle: string,
@@ -59,7 +52,7 @@ export default function ContentLoby({
   reverseElements,
   photosElements,
 }: IContent): JSX.Element {
-  const contInf = contentInformation(contentTitle, contentText, contentPriceText);
+  const contInf = contentInformation(contentTitle, contentText, contentPriceText!);
   const contPic = contentPictures(photosElements);
 
   return (
@@ -69,7 +62,7 @@ export default function ContentLoby({
         {reverseElements ? contInf : contPic}
       </div>
 
-      <hr />
+      <hr className="content_hr" />
     </>
   );
 }
