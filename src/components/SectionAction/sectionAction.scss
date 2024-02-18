@@ -1,8 +1,10 @@
 .action_section {
+    margin-bottom: 13rem;
+
     .action_elements-grid{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 35%);
         gap: 2rem;
 
         .action_el-1, .action_el-2 {
@@ -13,21 +15,26 @@
 
         .action_el-2{
             justify-content: flex-end;
+            grid-column: 2 /4;
+            grid-row: 1;
         }
 
         .action_el-3{
             display: flex;
             justify-content: flex-start;
-
+            grid-column: 4/6;
+            grid-row:  1;
+            
             img{
-                width: 70%;
+                width: 60%;
             }
         }
 
-        .action_el-5{
+        .action_el-4{
             display: flex;
             justify-content: flex-end;
-            
+            grid-column: 2 /4;
+
             h3{
                 font-variant-caps: all-petite-caps;
                 font-weight: 100;
@@ -36,13 +43,82 @@
             }
         }
 
-        .action_el-6 {
+        .action_el-5 {
             display: flex;
+            flex-wrap: wrap;
             justify-content: flex-start;
+            align-content: flex-start;
+            grid-row: 2;
+            grid-column: 4 /6;
 
             h2{
                 font-size: 4.5rem;
                 font-weight: 100;
+            }
+
+            .button_reserv{
+                a{
+                    position: relative;
+                    color: black;
+                    left:20px;
+                    top: 40px;
+                    font-size: 17px;
+                    padding: 3vh 10vh;
+        
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 10%;
+                        left:-10%;
+                        width: 130%;
+                        height: 70%;
+        
+                        background-color: #ffffff1a;
+                        opacity: 30%;
+                        border-radius: 5vh;
+                        border: 2px solid rgb(0, 0, 0);
+                    }
+        
+                }
+            }
+        }
+
+        .action_el-6{
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: flex-end;
+            justify-content: center;
+            column-gap: 1rem;
+
+            grid-column: -6 / -3;
+            grid-row: 3;
+        }
+
+        .action_el-8{
+           grid-row: 3;
+           grid-column: -4 /  -2;
+           
+           display: flex;
+           justify-content: center;
+           align-items: end;
+
+           p{
+            text-align: right;
+            letter-spacing: 1px;
+            font-size: 18px;
+           }
+        }
+
+        .action_el-9{
+           grid-column: -3 /  -1;
+           grid-row: 3;
+
+           display: flex;
+           justify-content: flex-end;
+           align-items: end;
+           
+            img{
+                width: 70%;
             }
         }
     }
