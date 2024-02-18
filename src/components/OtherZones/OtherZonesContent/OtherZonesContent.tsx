@@ -1,4 +1,4 @@
-import { IContent } from "../interfaces";
+import { IContent } from "../../interfaces";
 import "./otherZonesContent.scss";
 
 function contentInformation(title: string, text: string): JSX.Element {

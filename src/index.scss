@@ -7,11 +7,11 @@ $margin_wrap: 7vh;
   padding: 0;
   margin: 0;
   font-family: 'Carlito', sans-serif;
-
 }
 
 body{
   background: white;
+  overflow-x: hidden;
 
   a{
     text-decoration: none;

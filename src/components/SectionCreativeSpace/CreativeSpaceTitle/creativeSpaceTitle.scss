@@ -1,0 +1,45 @@
+.creative_space_title{
+    h1{
+        font-size: 5rem;
+        text-align: center;
+    }
+
+    .creative_space_title-run-text{
+        display: flex;
+        white-space: nowrap;
+        
+        .run_text-element{
+            display: flex;
+            white-space: nowrap;
+            animation: moveTextLeft 20s linear infinite;
+
+            h1{
+                margin-right: 5rem;
+                position: relative;
+                
+                &::after{
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    top: 35px;
+                    right: -55px;
+                    
+                    border: 1rem solid black;
+                    border-radius: 100%;
+                }
+            }
+        }
+        
+
+
+        @keyframes moveTextLeft {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    }
+}
