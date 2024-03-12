@@ -1,11 +1,11 @@
-import ContentLoby from "./ContentLoby.tsx";
+import ContentLoby from "./ContentLoby/ContentLoby.tsx";
 import { contents } from "./content.ts";
-import "./sectionLoby.scss";
+import classesCss from "./sectionLoby.module.scss";
 
 export default function SectionLoby(): JSX.Element {
   return (
-    <section className="section_loby-contents">
-      <div className="section_title">
+    <section className={classesCss.sectionLobyContents}>
+      <div className={classesCss.sectionTitle}>
         <h1>ЗАЛЫ</h1>
         <h5>
           5 залов в разных стилях, оснащенные новым <br />

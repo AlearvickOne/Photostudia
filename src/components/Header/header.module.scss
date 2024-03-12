@@ -2,7 +2,7 @@ header{
 
     margin-bottom: 5rem;
 
-    .header_background{
+    .headerBackground{
         position: relative;
 
         video{
@@ -10,12 +10,12 @@ header{
             transform: scale(166.5%, 105%);
         }
 
-        a, .number_phone, .header_bottom{
+        a, .numberPhone, .headerBottom{
             color: white;
         }
     }
 
-    .header_top{
+    .headerTop{
         position: absolute;
         top: 0;
         left: 0;
@@ -44,24 +44,24 @@ header{
         }
     }
    
-    .header_bottom{
+    .headerBottom{
         display: flex;
         align-items: center;
         position: absolute;
         bottom: 5vh;
         left: 7vh;
 
-        .header_title_low{
+        .headerTitleLow{
             text-align: right;
             font-size: 2.6vh;
             font-weight: 100;
         }
-        .header_title_big{
+        .headerTitleBig{
             font-size: 10vh;
             font-weight: 100;
         }
 
-        .header_button_reserv{
+        .headerButtonReserv{
             padding-left: 20rem;
             
             a{

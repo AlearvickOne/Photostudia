@@ -1,9 +1,9 @@
-import "./otherZonesTitle.scss";
+import classesCss from "./otherZonesTitle.module.scss";
 
 export default function OtherZonesTitle(): JSX.Element {
   return (
-    <div className="other_zone-titles-container">
-      <section className="other_zone-titles">
+    <div className={classesCss.otherZoneTitlesContainer}>
+      <section className={classesCss.otherZoneTitles}>
         <div className="other_zone-title_big">
           <h1>ДРУГИЕ ЗОНЫ</h1>
         </div>

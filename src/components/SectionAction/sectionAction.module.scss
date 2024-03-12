@@ -1,25 +1,25 @@
-.action_section {
+.actionSection {
     margin-bottom: 13rem;
 
-    .action_elements-grid{
+    .actionElementsGrid{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(3, 35%);
         gap: 2rem;
 
-        .action_el-1, .action_el-2 {
+        .actionEl_1, .actionEl_2 {
             display: flex;
             align-items: center;
             justify-content: flex-start;
         }
 
-        .action_el-2{
+        .actionEl_2{
             justify-content: flex-end;
             grid-column: 2 /4;
             grid-row: 1;
         }
 
-        .action_el-3{
+        .actionEl_3{
             display: flex;
             justify-content: flex-start;
             grid-column: 4/6;
@@ -30,7 +30,7 @@
             }
         }
 
-        .action_el-4{
+        .actionEl_4{
             display: flex;
             justify-content: flex-end;
             grid-column: 2 /4;
@@ -43,7 +43,7 @@
             }
         }
 
-        .action_el-5 {
+        .actionEl_5 {
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
@@ -56,7 +56,7 @@
                 font-weight: 100;
             }
 
-            .button_reserv{
+            .buttonReserv{
                 a{
                     position: relative;
                     color: black;
@@ -83,7 +83,7 @@
             }
         }
 
-        .action_el-6{
+        .actionEl_6{
             display: flex;
             flex-wrap: nowrap;
             align-items: flex-end;
@@ -94,7 +94,7 @@
             grid-row: 3;
         }
 
-        .action_el-8{
+        .actionEl_7{
            grid-row: 3;
            grid-column: -4 /  -2;
            
@@ -109,7 +109,7 @@
            }
         }
 
-        .action_el-9{
+        .actionEl_8{
            grid-column: -3 /  -1;
            grid-row: 3;
 

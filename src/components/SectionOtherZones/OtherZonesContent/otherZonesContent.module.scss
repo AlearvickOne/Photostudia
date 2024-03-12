@@ -1,14 +1,14 @@
 $bottomMargin: 4.5px;
 
-.other_zone_content{
+.otherZoneContent{
     display: flex;
     column-gap: 15vh;
     margin-bottom: 3rem;
     
-    .content_information {   
+    .contentInformation {   
         width: 50%;
 
-        .content_info-title{
+        .contentInfoTitle{
             display: flex;
             flex-wrap: nowrap;
 
@@ -27,7 +27,7 @@ $bottomMargin: 4.5px;
         }
     }
 
-    .content_photo-grid{
+    .contentPhotoGrid{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;

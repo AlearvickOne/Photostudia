@@ -1,5 +1,5 @@
-import { IContent } from "../interfaces";
-import "./contentLoby.scss";
+import { IContent } from "../../interfaces";
+import classesCss from "./contentLoby.module.scss";
 
 import { Link } from "react-router-dom";
 
@@ -9,17 +9,17 @@ function contentInformation(
   contentPriceText: string
 ): JSX.Element {
   return (
-    <div className="content_information">
-      <div className="content_title" dangerouslySetInnerHTML={{ __html: contentTitle }}></div>
-      <div className="content_text" dangerouslySetInnerHTML={{ __html: contentText }}></div>
+    <div className={classesCss.contentInformation}>
+      <div className={classesCss.contentTitle} dangerouslySetInnerHTML={{ __html: contentTitle }} />
+      <div className={classesCss.contentText} dangerouslySetInnerHTML={{ __html: contentText }} />
 
-      <div className="content_price">
-        <h3 className="content_price-title">Стоимость</h3>
+      <div className={classesCss.contentPrice}>
+        <h3 className={classesCss.contentPriceTitle}>Стоимость</h3>
         <div
-          className="content_price-text"
+          className={classesCss.contentPriceText}
           dangerouslySetInnerHTML={{ __html: contentPriceText }}
         ></div>
-        <div className="content_button_reserv">
+        <div className={classesCss.contentButtonReserv}>
           <Link to="#!">ЗАБРОНИРОВАТЬ</Link>
         </div>
       </div>
@@ -29,13 +29,13 @@ function contentInformation(
 
 function contentPictures(photosElements: { image: string }[]): JSX.Element {
   return (
-    <div className="content_pictures">
-      <img className="big_img" src={photosElements[0].image} alt="pic" />
-      <div className="low_imgs">
+    <div className={classesCss.contentPictures}>
+      <img className={classesCss.bigImg} src={photosElements[0].image} alt="pic" />
+      <div className={classesCss.lowImgs}>
         {photosElements.map((el, i) => {
           if (i !== 0)
             return (
-              <div className="low_img">
+              <div className={classesCss.lowImg}>
                 <img key={i} src={el.image} alt="lowImage" />
               </div>
             );
@@ -57,12 +57,12 @@ export default function ContentLoby({
 
   return (
     <>
-      <div className="content_loby">
+      <div className={classesCss.contentLoby}>
         {reverseElements ? contPic : contInf}
         {reverseElements ? contInf : contPic}
       </div>
 
-      <hr className="content_hr" />
+      <hr className={classesCss.contentHr} />
     </>
   );
 }

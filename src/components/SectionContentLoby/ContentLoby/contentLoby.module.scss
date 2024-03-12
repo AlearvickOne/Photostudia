@@ -4,18 +4,18 @@ $bottomMargin: 4.5px;
     margin-bottom: 5rem;
 }
 
-.content_loby{
+.contentLoby{
     display: flex;
     column-gap: 5vh;
 
-    .content_information{
+    .contentInformation{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         flex-direction: column;
         width: 50%;
     
-        .content_title{
+        .contentTitle{
             margin-bottom: $bottomMargin;
             
             h2{
@@ -25,7 +25,7 @@ $bottomMargin: 4.5px;
             }
         }          
 
-        .content_text{
+        .contentText{
         
             *{
                 margin-bottom: $bottomMargin;
@@ -37,19 +37,19 @@ $bottomMargin: 4.5px;
             }
     }
 
-    .content_price{
+    .contentPrice{
         margin-bottom: 3rem;
 
-        .content_price-title{
+        .contentPriceTitle{
             margin-bottom: $bottomMargin;
         }
-        .content_price-text{
+        .contentPriceText{
             line-height: 1.5rem;
             
         }
     }
 
-    .content_button_reserv{
+    .contentButtonReserv{
         a{
             position: relative;
             color: black;
@@ -76,23 +76,23 @@ $bottomMargin: 4.5px;
     }
  }
     
-    .content_pictures{
+    .contentPictures{
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: space-between;
         width: 60%;
 
-        .big_img{
+        .bigImg{
             width: 100%;
             margin-bottom: 1rem;
         }
-        .low_imgs{
+        .lowImgs{
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             column-gap: 1rem;
 
-            .low_img{
+            .lowImg{
                 width: 100%;
                
                 &:last-child{
@@ -112,6 +112,6 @@ $bottomMargin: 4.5px;
    
 }
 
-.content_hr{
+.contentHr{
     border: 1px solid #8b8989bc;
 }

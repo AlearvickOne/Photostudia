@@ -1,18 +1,18 @@
 import { IContent } from "../../interfaces";
-import "./otherZonesContent.scss";
+import classesCss from "./otherZonesContent.module.scss";
 
 function contentInformation(title: string, text: string): JSX.Element {
   return (
-    <div className="content_information">
-      <div className="content_info-title" dangerouslySetInnerHTML={{ __html: title }} />
-      <div className="content_info-text" dangerouslySetInnerHTML={{ __html: text }} />
+    <div className={classesCss.contentInformation}>
+      <div className={classesCss.contentInfoTitle} dangerouslySetInnerHTML={{ __html: title }} />
+      <div className={classesCss.contentInfoText} dangerouslySetInnerHTML={{ __html: text }} />
     </div>
   );
 }
 
 function contentPhotoGrid(photos: { image: string }[]): JSX.Element {
   return (
-    <div className="content_photo-grid">
+    <div className={classesCss.contentPhotoGrid}>
       {photos.map((el, i) => (
         <img key={i} src={el.image} />
       ))}
@@ -30,7 +30,7 @@ export default function OtherZonesContent({
   const contentPhoto = contentPhotoGrid(photosElements);
 
   return (
-    <div className="other_zone_content">
+    <div className={classesCss.otherZoneContent}>
       {reverseElements ? contentPhoto : contentInfo}
       {reverseElements ? contentInfo : contentPhoto}
     </div>

@@ -1,14 +1,16 @@
-.creative_space_title{
+.creativeSpaceTitle{
+    margin-bottom: 3rem;
+
     h1{
         font-size: 5rem;
         text-align: center;
     }
 
-    .creative_space_title-run-text{
+    .creativeSpaceTitleRunText{
         display: flex;
         white-space: nowrap;
         
-        .run_text-element{
+        .runTextElement{
             display: flex;
             white-space: nowrap;
             animation: moveTextLeft 20s linear infinite;

@@ -1,6 +1,5 @@
 import Header from "./components/Header/Header";
-import OtherZonesTitle from "./components/OtherZones/OtherZonesTitle";
-import OtherZonesContentLoby from "./components/OtherZones/OtherZonesContent/OtherZonesContentLoby";
+import SectionOtherZones from "./components/SectionOtherZones/SectionOtherZones";
 import SectionAction from "./components/SectionAction/SectionAction";
 import SectionLoby from "./components/SectionContentLoby/SectionLoby";
 import SectionCreativeSpace from "./components/SectionCreativeSpace/SectionCreativeSpace";
@@ -11,8 +10,7 @@ function App() {
       <Header />
       <main>
         <SectionLoby />
-        <OtherZonesTitle />
-        <OtherZonesContentLoby />
+        <SectionOtherZones />
         <SectionAction />
         <SectionCreativeSpace />
       </main>

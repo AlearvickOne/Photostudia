@@ -1,11 +1,11 @@
 import OtherZonesContent from "./OtherZonesContent";
 import { otherContents } from "./otherContents";
 
-import "./otherZonesContentLoby.scss";
+import classesCss from "./otherZonesContentLoby.module.scss";
 
 export default function OtherZonesContentLoby(): JSX.Element {
   return (
-    <section className="other_zones_content-section">
+    <section className={classesCss.otherZonesContentSection}>
       {otherContents.map((el, i) => (
         <OtherZonesContent
           key={i}
