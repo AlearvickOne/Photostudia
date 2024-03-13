@@ -1,3 +1,4 @@
+import CreativeSpaceEquipment from "./CreativeSpaceEquipment/CreativeSpaceEquipment";
 import CreativeSpaceTitle from "./CreativeSpaceTitle/CreativeSpaceTitle";
 import CreativeSpaceVideo from "./CreativeSpaceVideo/CreativeSpaceVideo";
 
@@ -6,6 +7,7 @@ export default function SectionCreativeSpace(): JSX.Element {
     <section>
       <CreativeSpaceTitle />
       <CreativeSpaceVideo />
+      <CreativeSpaceEquipment />
     </section>
   );
 }
