@@ -1,0 +1,49 @@
+.servicesContent{
+  
+    .contentInformation{
+        background: #e8e5e5;
+    }
+
+    .contentPicture{
+        background: url('../../../assets/sectionServices/commercialShooting.svg');
+
+        .contentTitle{
+            background: black;
+            color: white;
+        }
+    }
+
+    .contentTitle{
+        border: 1px solid black;
+        border-radius: 30px;
+        text-align: center;
+        max-width: 40vh;
+        padding: 1vh 3vh;
+    }
+
+    .activeAnim{
+        animation: flip-in-ver-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 27rem;
+        max-width: 27rem;
+        padding: 1.5rem;
+    }
+
+
+    @keyframes flip-in-ver-right {
+        0% {
+          transform: rotateY(-80deg);
+          opacity: 0;
+        }
+        100% {
+          transform: rotateY(0);
+          opacity: 1;
+        }
+      }
+      
+      
+}
