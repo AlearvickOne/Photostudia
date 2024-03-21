@@ -8,9 +8,7 @@ export default function CreativeSpaceVideo(): JSX.Element {
   return (
     <div className={classesCss.creativeSpaceVideo}>
       <ReactPlayer
-        url={
-          "https://www.dropbox.com/scl/fi/is9qmbxnlq8lvvji4j8zb/photostudia.mp4?rlkey=p1rm8sn6z15dpui5qf8vcgoil&dl=0"
-        }
+        url={"https://www.dropbox.com/scl/fi/is9qmbxnlq8lvvji4j8zb/photostudia.mp4?rlkey=p1rm8sn6z15dpui5qf8vcgoil&dl=0"}
         playing={true}
         controls={true}
         width={"100%"}

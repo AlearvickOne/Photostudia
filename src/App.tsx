@@ -4,6 +4,7 @@ import SectionAction from "./components/SectionAction/SectionAction";
 import SectionLoby from "./components/SectionContentLoby/SectionLoby";
 import SectionCreativeSpace from "./components/SectionCreativeSpace/SectionCreativeSpace";
 import SectionServices from "./components/SectionServices/SectionsServices";
+import SectionActionListContent from "./components/SectionActionList/SectionActionListContent/SectionActionListContent";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <SectionAction />
         <SectionCreativeSpace />
         <SectionServices />
+        <SectionActionListContent />
       </main>
     </>
   );

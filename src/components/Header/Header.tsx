@@ -52,9 +52,7 @@ export default function Header(): JSX.Element {
 
         <div className={classesCss.headerBottom}>
           <div className={classesCss.headerBottomTitle}>
-            <h5 className={classesCss.headerTitleLow}>
-              -50% на первое посещение по промокоду «водолей»
-            </h5>
+            <h5 className={classesCss.headerTitleLow}>-50% на первое посещение по промокоду «водолей»</h5>
             <h1 className={classesCss.headerTitleBig}>АРТ ФОТОСТУДИЯ</h1>
           </div>
           <div className={classesCss.headerButtonReserv}>

@@ -3,11 +3,7 @@ import classesCss from "./contentLoby.module.scss";
 
 import { Link } from "react-router-dom";
 
-function contentInformation(
-  contentTitle: string,
-  contentText: string,
-  contentPriceText: string
-): JSX.Element {
+function contentInformation(contentTitle: string, contentText: string, contentPriceText: string): JSX.Element {
   return (
     <div className={classesCss.contentInformation}>
       <div className={classesCss.contentTitle} dangerouslySetInnerHTML={{ __html: contentTitle }} />
@@ -15,10 +11,7 @@ function contentInformation(
 
       <div className={classesCss.contentPrice}>
         <h3 className={classesCss.contentPriceTitle}>Стоимость</h3>
-        <div
-          className={classesCss.contentPriceText}
-          dangerouslySetInnerHTML={{ __html: contentPriceText }}
-        ></div>
+        <div className={classesCss.contentPriceText} dangerouslySetInnerHTML={{ __html: contentPriceText }}></div>
         <div className={classesCss.contentButtonReserv}>
           <Link to="#!">ЗАБРОНИРОВАТЬ</Link>
         </div>
@@ -45,13 +38,7 @@ function contentPictures(photosElements: { image: string }[]): JSX.Element {
   );
 }
 
-export default function ContentLoby({
-  contentTitle,
-  contentText,
-  contentPriceText,
-  reverseElements,
-  photosElements,
-}: IContent): JSX.Element {
+export default function ContentLoby({ contentTitle, contentText, contentPriceText, reverseElements, photosElements }: IContent): JSX.Element {
   const contInf = contentInformation(contentTitle, contentText, contentPriceText!);
   const contPic = contentPictures(photosElements);
 
