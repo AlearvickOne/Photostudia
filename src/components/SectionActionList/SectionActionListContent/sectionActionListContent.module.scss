@@ -1,50 +1,85 @@
+.QRCode{
 
+    canvas{
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 10px;
+        margin: 20px 0;
+    }
+    
+}
 
 .actionListGrid{
     display: grid;
     grid-template-columns: 85vh 1fr;
     margin-bottom: 5rem;
-    height: 100vh;
 
-    .actionListContentFlex{
-        display: grid;
-        grid-template-columns: 1fr 596px;
-        margin: 2rem 0;
+    .actionListTitle{
 
-        p, li{
-            margin-bottom: 0.5rem;
+        h4{
+            font-weight: 100;
+            font-size: 25px;
+            letter-spacing: 2px;
+        }
+    }
+
+    .actionListContent{
+
+        hr{
+            border: 1px solid black
         }
 
-        .actionListContentTitle{
-            font-size: 25vh;
-            line-height: 0;
-            margin-top: 3rem;
-            color: #aeaeae;
-        }
+        .actionListContentFlex{
+            display: grid;
+            grid-template-columns: 1fr 596px;
+            margin: 2rem 0;
+    
+          
 
-        .actionListContentText{
-            margin-top: 1rem;
-            position: relative;
-            
-
-            .buttonOpen{
-                position: absolute;
-                right: 0;
-                top: 0;
-                width: 30px;
-                height: 5px;
-                background: #aeaeae;
-                border: none;
-
-                &:hover{
-                    cursor: pointer;
+            p, li{
+                margin-bottom: 0.5rem;
+            }
+    
+            .actionListContentTitle{
+                font-size: 25vh;
+                line-height: 0;
+                margin-top: 3rem;
+                color: #aeaeae;
+            }
+    
+            .actionListContentText{
+                position: relative;
+                
+                .actionListContentTextHead{
+                    height: 19vh;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                }
+    
+                .buttonOpen{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 30px;
+                    height: 5px;
+                    background: #aeaeae;
+                    border: none;
+    
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+    
+                li{
+                    margin-left: 1rem;
                 }
             }
 
-            li{
-                margin-left: 1rem;
-            }
-        }
+    }
+
+  
 
 
         .openTextAnim{
