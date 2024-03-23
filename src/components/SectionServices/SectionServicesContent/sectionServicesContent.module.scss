@@ -1,68 +1,63 @@
-.servicesContent{
-  
-    .contentInformation{
-        background: #e8e5e5;
+.servicesContent {
+  .contentInformation {
+    background: #e8e5e5;
 
-        p{
-            font-size: 14px;
-            line-height: 1.3rem;
-            margin-bottom: 2vh;
-        }
-
-        .bigFont{
-            font-size: 16px;
-            font-weight:800;
-            letter-spacing: 1px
-        }
-
-        li{
-            margin-bottom: 2vh;
-            margin-left: 1.3rem;
-        }
+    p {
+      font-size: 14px;
+      line-height: 1.3rem;
+      margin-bottom: 2vh;
     }
 
-    .contentPicture{
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        .contentTitle{
-            background: black;
-            color: white;
-        }
+    .bigFont {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 1px;
     }
 
-    .contentTitle{
-        display: inline-block;
-        border: 1px solid black;
-        border-radius: 30px;
-        padding: 1.5vh 3.5vh;
-        
+    li {
+      margin-bottom: 2vh;
+      margin-left: 1.3rem;
     }
+  }
 
-    .activeAnim{
-        animation: flip-in-ver-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  .contentPicture {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 27rem;
-        max-width: 27rem;
-        padding: 1.5rem;
+    .contentTitle {
+      background: black;
+      color: white;
     }
+  }
 
+  .contentTitle {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 1.5vh 3.5vh;
+  }
 
-    @keyframes flip-in-ver-right {
-        0% {
-          transform: rotateY(-80deg);
-          opacity: 0;
-        }
-        100% {
-          transform: rotateY(0);
-          opacity: 1;
-        }
-      }
-      
-      
+  .activeAnim {
+    animation: flip-in-ver-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 27rem;
+    max-width: 27rem;
+    padding: 1.5rem;
+  }
+
+  @keyframes flip-in-ver-right {
+    0% {
+      transform: rotateY(-80deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateY(0);
+      opacity: 1;
+    }
+  }
 }

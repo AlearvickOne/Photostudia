@@ -1,89 +1,89 @@
-header{
+header {
+  margin-bottom: 5rem;
 
-    margin-bottom: 5rem;
+  .headerBackground {
+    position: relative;
 
-    .headerBackground{
+    video {
+      width: 75%;
+      transform: scale(166.5%, 105%);
+    }
+
+    a,
+    .numberPhone,
+    .headerBottom {
+      color: white;
+    }
+  }
+
+  .headerTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97%;
+
+    display: flex;
+    margin: 35px 25px 0 20px;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      max-width: 160px;
+    }
+
+    ul {
+      display: flex;
+      list-style-type: none;
+
+      li {
+        margin-right: 10vh;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .headerBottom {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 5vh;
+    left: 7vh;
+
+    .headerTitleLow {
+      text-align: right;
+      font-size: 2.6vh;
+      font-weight: 100;
+    }
+    .headerTitleBig {
+      font-size: 10vh;
+      font-weight: 100;
+    }
+
+    .headerButtonReserv {
+      padding-left: 20rem;
+
+      a {
         position: relative;
+        font-size: 17px;
 
-        video{
-            width: 75%;
-            transform: scale(166.5%, 105%);
-        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 8px;
+          left: 0;
+          width: 100%;
+          height: 70%;
 
-        a, .numberPhone, .headerBottom{
-            color: white;
+          background-color: #ffffff1a;
+          opacity: 30%;
+          border-radius: 5vh;
+          border: 2px solid white;
         }
+        padding: 3vh 10vh;
+      }
     }
-
-    .headerTop{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 97%;
-
-        display: flex;
-        margin: 35px 25px 0 20px;
-        justify-content: space-between;
-        align-items: center;
-    
-        img{
-            max-width: 160px;
-        }
-    
-        ul{
-            display: flex;
-            list-style-type: none;
-    
-            li{
-                margin-right: 10vh;
-
-                &:last-child{
-                    margin-right: 0;
-                }
-            }
-        }
-    }
-   
-    .headerBottom{
-        display: flex;
-        align-items: center;
-        position: absolute;
-        bottom: 5vh;
-        left: 7vh;
-
-        .headerTitleLow{
-            text-align: right;
-            font-size: 2.6vh;
-            font-weight: 100;
-        }
-        .headerTitleBig{
-            font-size: 10vh;
-            font-weight: 100;
-        }
-
-        .headerButtonReserv{
-            padding-left: 20rem;
-            
-            a{
-                position: relative;
-                font-size: 17px;
-                
-                &::before{
-                    content: "";
-                    position: absolute;
-                    top: 8px;
-                    left:0;
-                    width: 100%;
-                    height: 70%;
-
-                    background-color: #ffffff1a;
-                    opacity: 30%;
-                    border-radius: 5vh;
-                    border: 2px solid white;
-                }
-                padding: 3vh 10vh;
-
-            }
-        }
-    }
+  }
 }

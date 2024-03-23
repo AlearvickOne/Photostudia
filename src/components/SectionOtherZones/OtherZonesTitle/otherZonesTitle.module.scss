@@ -1,21 +1,19 @@
-.otherZoneTitlesContainer{
-    background: #000;
-    margin-bottom: 3rem;
+.otherZoneTitlesContainer {
+  background: #000;
+  margin-bottom: 3rem;
 
-    .otherZoneTitles {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
+  .otherZoneTitles {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
 
-        padding: 2rem 0;
-        color: #fff;
+    padding: 2rem 0;
+    color: #fff;
 
-        h1{
-            font-weight: 500;
-            letter-spacing: 1vh;
-        }
+    h1 {
+      font-weight: 500;
+      letter-spacing: 1vh;
     }
-    
-    
+  }
 }

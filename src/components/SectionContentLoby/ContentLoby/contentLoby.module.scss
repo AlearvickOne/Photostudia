@@ -1,117 +1,112 @@
 $bottomMargin: 4.5px;
 
-.section_loby-contents{
-    margin-bottom: 5rem;
+.section_loby-contents {
+  margin-bottom: 5rem;
 }
 
-.contentLoby{
+.contentLoby {
+  display: flex;
+  column-gap: 5vh;
+
+  .contentInformation {
     display: flex;
-    column-gap: 5vh;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 50%;
 
-    .contentInformation{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        flex-direction: column;
-        width: 50%;
-    
-        .contentTitle{
-            margin-bottom: $bottomMargin;
-            
-            h2{
-                margin-top: -1rem;
-                font-size: 4rem;
-                font-weight: 100;
-            }
-        }          
+    .contentTitle {
+      margin-bottom: $bottomMargin;
 
-        .contentText{
-        
-            *{
-                margin-bottom: $bottomMargin;
-                line-height: 1.5rem;
-            }
-            
-            li{
-                margin-left: 3vh;
-            }
+      h2 {
+        margin-top: -1rem;
+        font-size: 4rem;
+        font-weight: 100;
+      }
     }
 
-    .contentPrice{
-        margin-bottom: 3rem;
+    .contentText {
+      * {
+        margin-bottom: $bottomMargin;
+        line-height: 1.5rem;
+      }
 
-        .contentPriceTitle{
-            margin-bottom: $bottomMargin;
-        }
-        .contentPriceText{
-            line-height: 1.5rem;
-            
-        }
+      li {
+        margin-left: 3vh;
+      }
     }
 
-    .contentButtonReserv{
-        a{
-            position: relative;
-            color: black;
-            left:20px;
-            top: 40px;
-            font-size: 17px;
-            padding: 3vh 10vh;
+    .contentPrice {
+      margin-bottom: 3rem;
 
-            &::before{
-                content: "";
-                position: absolute;
-                top: 10%;
-                left:-10%;
-                width: 130%;
-                height: 70%;
-
-                background-color: #ffffff1a;
-                opacity: 30%;
-                border-radius: 5vh;
-                border: 2px solid rgb(0, 0, 0);
-            }
-
-        }
-    }
- }
-    
-    .contentPictures{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 60%;
-
-        .bigImg{
-            width: 100%;
-            margin-bottom: 1rem;
-        }
-        .lowImgs{
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            column-gap: 1rem;
-
-            .lowImg{
-                width: 100%;
-               
-                &:last-child{
-                    margin-left: 0;
-                }
-
-                img{
-                    width: 100px;
-                    height: 100px;
-                    object-fit: cover;
-                    object-position: 0 0;
-                }
-            }
-        }
+      .contentPriceTitle {
+        margin-bottom: $bottomMargin;
+      }
+      .contentPriceText {
+        line-height: 1.5rem;
+      }
     }
 
-   
+    .contentButtonReserv {
+      a {
+        position: relative;
+        color: black;
+        left: 20px;
+        top: 40px;
+        font-size: 17px;
+        padding: 3vh 10vh;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 10%;
+          left: -10%;
+          width: 130%;
+          height: 70%;
+
+          background-color: #ffffff1a;
+          opacity: 30%;
+          border-radius: 5vh;
+          border: 2px solid rgb(0, 0, 0);
+        }
+      }
+    }
+  }
+
+  .contentPictures {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+
+    .bigImg {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .lowImgs {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      column-gap: 1rem;
+
+      .lowImg {
+        width: 100%;
+
+        &:last-child {
+          margin-left: 0;
+        }
+
+        img {
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+          object-position: 0 0;
+        }
+      }
+    }
+  }
 }
 
-.contentHr{
-    border: 1px solid #8b8989bc;
+.contentHr {
+  border: 1px solid #8b8989bc;
 }
