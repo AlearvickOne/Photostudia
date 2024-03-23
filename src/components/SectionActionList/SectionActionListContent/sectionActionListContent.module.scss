@@ -26,58 +26,67 @@
     .actionListContent{
 
         hr{
-            border: 1px solid black
+            border-bottom: 2px solid black
         }
 
         .actionListContentFlex{
-            display: grid;
-            grid-template-columns: 1fr 596px;
-            margin: 2rem 0;
-    
-          
 
-            p, li{
-                margin-bottom: 0.5rem;
-            }
-    
-            .actionListContentTitle{
-                font-size: 25vh;
-                line-height: 0;
-                margin-top: 3rem;
-                color: #aeaeae;
-            }
-    
-            .actionListContentText{
-                position: relative;
-                
-                .actionListContentTextHead{
-                    height: 19vh;
-                    display: flex;
-                    flex-wrap: wrap;
-                    flex-direction: column;
-                    justify-content: flex-end;
+            .actionListContentTextParent{
+                list-style-type: none;
+
+                &:last-child{
+                    border-bottom: 2px solid black
                 }
-    
-                .buttonOpen{
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    width: 30px;
-                    height: 5px;
-                    background: #aeaeae;
-                    border: none;
-    
-                    &:hover{
-                        cursor: pointer;
+
+                .actionListContentTextChild{
+                    position: relative;
+                    width: 100%;
+                    display: inline-flex;
+                    flex-direction: row;
+                    align-items: baseline;
+                    margin-bottom: 10vh;
+
+                    .numberLi {
+                        color: #aeaeae;
+                        font-size: 30vh;
+                    }
+                    img{
+                        width: 26vh;
+                    }
+
+                    span{
+
+                        margin-left: 10vh;
+
+                        *{
+                            margin-bottom: 1vh;
+                            line-height: 4vh;
+                        }
+                        li{
+                            margin-left: 3vh;
+                        }
+                        em{
+                            color:#0b405d
+                        }
+
+                        .headStaticText, .bodyDynamicText{
+                            display: inline-block;
+                        }
+                    }
+
+                    .buttonOpen{
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top: 25px;
+                        width: 30px;
+                        height: 5px;
+                        background: #aeaeae;
+                        border: none;
                     }
                 }
-    
-                li{
-                    margin-left: 1rem;
-                }
             }
-
-    }
+        }
 
   
 
@@ -88,7 +97,7 @@
 
         @keyframes slide-bottom {
             0% {
-              transform: translateY(-20px);
+              transform: translateY(-10px);
               opacity: 1%;
               
             }

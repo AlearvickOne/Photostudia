@@ -1,8 +1,9 @@
 import { useState } from "react";
 import classesCss from "./sectionActionListContent.module.scss";
 import QRCode from "qrcode.react";
+import imgActionNotNumber from "../../../assets/SectionActionList/imgActionNotNumber.svg";
 
-const contents = [
+const contentsForProfessionals = [
   {
     id: "01",
     head: (
@@ -75,9 +76,13 @@ const contents = [
           Пакет на 3 часа аренды зала «Дождь» по прайсу 6000₽ - 10% = 5400₽ <br /> (1800₽/час вместо 2000₽/час)
         </p>
         <p>
-          *Если студию оплачивает ваш клиент, то мы просто компенсируем <br /> обратно в депозит сумму скидки.
+          <em>
+            *Если студию оплачивает ваш клиент, то мы просто компенсируем <br /> обратно в депозит сумму скидки.
+          </em>
         </p>
-        <p>*Депозит действует 3 месяца с первой съемки.</p>
+        <p>
+          <em>*Депозит действует 3 месяца с первой съемки.</em>
+        </p>
       </>
     ),
     QRVisible: null,
@@ -97,8 +102,10 @@ const contents = [
     body: (
       <>
         <p>
-          *Если было от 5 съемок за текущий месяц, зачисление кэшбэка <br /> происхдит по итогам месяца, каждого 1 числа нового месяца. <br />
-          Использовать кэшбэк можно для любой последующей съемки.
+          <em>
+            *Если было от 5 съемок за текущий месяц, зачисление кэшбэка <br /> происхдит по итогам месяца, каждого 1 числа нового месяца. <br />
+            Использовать кэшбэк можно для любой последующей съемки.
+          </em>
         </p>
       </>
     ),
@@ -127,6 +134,41 @@ const contents = [
   },
 ];
 
+const contentsForClients = [
+  {
+    id: <img src={imgActionNotNumber} alt="icon" />,
+    head: (
+      <>
+        <p>
+          <strong>Система скидок для коммерческих проектов</strong>
+        </p>
+        <p>Первый пробный час предоставляется бесплатно.</p>
+      </>
+    ),
+    body: (
+      <>
+        <p>
+          При единоразовой оплате депозита на 20 часов — стоимость аренды зала <br /> 1000₽/час, то есть 20 000₽.
+        </p>
+        <p>
+          <em>*Использовать часы можно в разные дни, во всех залах, кроме зала «Дождь».</em>
+        </p>
+        <p>
+          <strong>
+            Клиентам, нацеленным на долгосрочные взаимовыгодные отношения, <br /> которым не подходит система депозита, предоставляем фиксированную
+            <br />
+            сумму 1250₽/час при бронировании от 4-х часов 1200₽/час.
+          </strong>
+        </p>
+        <p>
+          <em>*Оплата может совершаться на Р/С — нужно предоставить подтверждающие документы.</em>
+        </p>
+      </>
+    ),
+    QRVisible: null,
+  },
+];
+
 function QRCodeGenerator(): JSX.Element {
   const link = "www.studiaTeya.com";
 
@@ -138,8 +180,9 @@ function QRCodeGenerator(): JSX.Element {
 }
 
 type QRJsx = JSX.Element | null;
+type IdOrImage = JSX.Element | string;
 
-function ContentText(idContent: string, headContent: JSX.Element, bodyContent: JSX.Element, QRVisible: QRJsx): JSX.Element {
+function ContentText(idContent: IdOrImage, headContent: JSX.Element, bodyContent: JSX.Element, QRVisible: QRJsx): JSX.Element {
   const [isClickButton, setIsClickButton] = useState(false);
 
   const clickedBtn = () => {
@@ -148,18 +191,22 @@ function ContentText(idContent: string, headContent: JSX.Element, bodyContent: J
 
   return (
     <>
-      <hr />
       <div className={classesCss.actionListContentFlex}>
-        <h1 className={classesCss.actionListContentTitle}>{idContent}</h1>
-        <div className={classesCss.actionListContentText}>
-          <button type="button" className={classesCss.buttonOpen} onClick={() => clickedBtn()} />
-          <div className={classesCss.actionListContentTextHead}>{headContent}</div>
-          {isClickButton && (
-            <div className={classesCss.openTextAnim}>
-              {bodyContent} {QRVisible !== null && QRVisible}
-            </div>
-          )}
-        </div>
+        <ul className={classesCss.actionListContentTextParent}>
+          <li className={classesCss.actionListContentTextChild}>
+            <div className={classesCss.numberLi}>{idContent}</div>
+            <button type="button" className={classesCss.buttonOpen} onClick={() => clickedBtn()} />
+            <span>
+              <div className={classesCss.headStaticText}>{headContent}</div>
+              {isClickButton && (
+                <div className={`${classesCss.openTextAnim} ${classesCss.bodyDynamicText}`}>
+                  {bodyContent}
+                  {QRVisible !== null && QRVisible}
+                </div>
+              )}
+            </span>
+          </li>
+        </ul>
       </div>
     </>
   );
@@ -174,7 +221,19 @@ export default function SectionActionListContent(): JSX.Element {
             ДЛЯ ФОТОГРАФОВ <br /> И ВИДЕОГРАФОВ
           </h4>
         </div>
-        <div className={classesCss.actionListContent}>{contents.map((el) => ContentText(el.id, el.head, el.body, el.QRVisible))}</div>
+        <div className={classesCss.actionListContent}>
+          <hr />
+          {contentsForProfessionals.map((el) => ContentText(el.id, el.head, el.body, el.QRVisible))}
+        </div>
+      </div>
+      <div className={classesCss.actionListGrid}>
+        <div className={classesCss.actionListTitle}>
+          <h4>ДЛЯ КЛИЕНТОВ</h4>
+        </div>
+        <div className={classesCss.actionListContent}>
+          <hr />
+          {contentsForClients.map((el) => ContentText(el.id, el.head, el.body, el.QRVisible))}
+        </div>
       </div>
     </section>
   );
