@@ -5,7 +5,7 @@ header {
     position: relative;
 
     video {
-      width: 75%;
+      width: 100%;
       transform: scale(166.5%, 105%);
     }
 
@@ -23,12 +23,12 @@ header {
     width: 97%;
 
     display: flex;
-    margin: 35px 25px 0 20px;
+    margin: 2.188rem 1.563rem 0 1.25rem;
     justify-content: space-between;
     align-items: center;
 
     img {
-      max-width: 160px;
+      max-width: 10rem;
     }
 
     ul {
@@ -36,7 +36,7 @@ header {
       list-style-type: none;
 
       li {
-        margin-right: 10vh;
+        margin-right: 0.5rem;
 
         &:last-child {
           margin-right: 0;
@@ -49,16 +49,16 @@ header {
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: 5vh;
-    left: 7vh;
+    bottom: 2.5rem;
+    left: 3.5rem;
 
     .headerTitleLow {
       text-align: right;
-      font-size: 2.6vh;
+      font-size: 1.3rem;
       font-weight: 100;
     }
     .headerTitleBig {
-      font-size: 10vh;
+      font-size: 5rem;
       font-weight: 100;
     }
 
@@ -67,22 +67,22 @@ header {
 
       a {
         position: relative;
-        font-size: 17px;
+        font-size: 1.063rem;
 
         &::before {
           content: "";
           position: absolute;
-          top: 8px;
+          top: 0.5rem;
           left: 0;
           width: 100%;
           height: 70%;
 
           background-color: #ffffff1a;
           opacity: 30%;
-          border-radius: 5vh;
+          border-radius: 2.5rem;
           border: 2px solid white;
         }
-        padding: 3vh 10vh;
+        padding: 1.5rem 5rem;
       }
     }
   }

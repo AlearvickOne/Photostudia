@@ -3,19 +3,19 @@
     background: #e8e5e5;
 
     p {
-      font-size: 14px;
+      font-size: 0.875rem;
       line-height: 1.3rem;
-      margin-bottom: 2vh;
+      margin-bottom: 1rem;
     }
 
     .bigFont {
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 800;
-      letter-spacing: 1px;
+      letter-spacing: 0.063rem;
     }
 
     li {
-      margin-bottom: 2vh;
+      margin-bottom: 1rem;
       margin-left: 1.3rem;
     }
   }
@@ -34,8 +34,8 @@
   .contentTitle {
     display: inline-block;
     border: 1px solid black;
-    border-radius: 30px;
-    padding: 1.5vh 3.5vh;
+    border-radius: 1.875rem;
+    padding: 0.75rem 1.75rem;
   }
 
   .activeAnim {

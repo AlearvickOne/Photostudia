@@ -9,7 +9,7 @@
 
 .actionListGrid {
   display: grid;
-  grid-template-columns: 85vh 1fr;
+  grid-template-columns: auto 50rem;
   margin-bottom: 5rem;
 
   .actionListTitle {
@@ -39,25 +39,25 @@
           display: inline-flex;
           flex-direction: row;
           align-items: baseline;
-          margin-bottom: 10vh;
+          margin-bottom: 5rem;
 
           .numberLi {
             color: #aeaeae;
-            font-size: 30vh;
+            font-size: 10rem;
           }
           img {
-            width: 26vh;
+            width: 12rem;
           }
 
           span {
-            margin-left: 10vh;
+            margin-left: 5rem;
 
             * {
-              margin-bottom: 1vh;
-              line-height: 4vh;
+              margin-bottom: 0.5rem;
+              line-height: 1.5rem;
             }
             li {
-              margin-left: 3vh;
+              margin-left: 1rem;
             }
             em {
               color: #0b405d;

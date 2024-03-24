@@ -1,4 +1,4 @@
-$bottomMargin: 4.5px;
+$bottomMargin: 0.281rem;
 
 .section_loby-contents {
   margin-bottom: 5rem;
@@ -6,7 +6,7 @@ $bottomMargin: 4.5px;
 
 .contentLoby {
   display: flex;
-  column-gap: 5vh;
+  column-gap: 2.5rem;
 
   .contentInformation {
     display: flex;
@@ -32,7 +32,7 @@ $bottomMargin: 4.5px;
       }
 
       li {
-        margin-left: 3vh;
+        margin-left: 2.5rem;
       }
     }
 
@@ -51,10 +51,10 @@ $bottomMargin: 4.5px;
       a {
         position: relative;
         color: black;
-        left: 20px;
-        top: 40px;
-        font-size: 17px;
-        padding: 3vh 10vh;
+        left: 1.25rem;
+        top: 2.5rem;
+        font-size: 1.063rem;
+        padding: 1.5rem 3rem;
 
         &::before {
           content: "";
@@ -66,7 +66,7 @@ $bottomMargin: 4.5px;
 
           background-color: #ffffff1a;
           opacity: 30%;
-          border-radius: 5vh;
+          border-radius: 2.5rem;
           border: 2px solid rgb(0, 0, 0);
         }
       }
@@ -97,8 +97,8 @@ $bottomMargin: 4.5px;
         }
 
         img {
-          width: 100px;
-          height: 100px;
+          width: 6.25rem;
+          height: 6.25rem;
           object-fit: cover;
           object-position: 0 0;
         }

@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Carlito&display=swap");
 
 $margin_wrap: 7vh;
+:root{
+  max-width: 1366px;
+  min-height: 515px;
+  margin: 0 auto;
+  
+}
 
 * {
   box-sizing: border-box;
@@ -17,6 +23,24 @@ $margin_wrap: 7vh;
 body {
   background: white;
   overflow-x: hidden;
+  position: relative;
+
+  &::before, &::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1000%;
+    background-color: rgb(224, 224, 224);
+    background-size: cover;
+    z-index: 1;
+  }
+  &::before{
+    left: 110%;
+  }
+  &::after{
+    right: 110%;
+  }
 
   a {
     text-decoration: none;
@@ -29,11 +53,7 @@ body {
 
   h5 {
     font-weight: 100;
-    font-size: 3vh;
-  }
-
-  section {
-    margin: 0 $margin_wrap;
+    font-size: 1.2rem;
   }
 
   .hr_black {
