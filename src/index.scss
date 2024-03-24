@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Carlito&display=swap");
 
 $margin_wrap: 7vh;
+
 :root{
   max-width: 1366px;
   min-height: 515px;
   margin: 0 auto;
   
+
+  @media (width: 1366px) {
+    max-width: 1250px;
+  }
 }
 
 * {
