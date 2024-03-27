@@ -5,6 +5,7 @@ import SectionLoby from "./components/SectionContentLoby/SectionLoby";
 import SectionCreativeSpace from "./components/SectionCreativeSpace/SectionCreativeSpace";
 import SectionServices from "./components/SectionServices/SectionsServices";
 import SectionActionListContent from "./components/SectionActionList/SectionActionListContent/SectionActionListContent";
+import { SectionQustionsContent } from "./components/SectionQuestions/SectionQuestionsContent/SectionQustionsContent";
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
         <SectionAction />
         <SectionCreativeSpace />
         <SectionServices />
+        {/*Дописать*/}
         <SectionActionListContent />
+        <SectionQustionsContent />
       </main>
     </>
   );
