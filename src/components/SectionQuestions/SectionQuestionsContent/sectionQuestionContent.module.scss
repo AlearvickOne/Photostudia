@@ -1,10 +1,54 @@
 .sectionQuestionContentList{
     width: 100%;
+    margin-bottom: 5rem;
 
+    
     .sectionQuestionsContentFlex{
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 5rem 1fr;
+        align-items: center;
+
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+
+        .sectionQuestionsContentHead{
+            display: inline-block;
+        }
+
+        .sectionQuestionContentNumber{
+            text-align: left;
+            font-size: 3rem;
+            line-height: 5rem;
+        }
+
+        .sectionQuestionContentTitle{
+            font-size: 2rem;
+            font-weight: 100;
+            font-variant-caps: all-small-caps;
+            text-align: left;
+        }
+
+        p{
+            text-align: left;
+            grid-row-start: -2;
+            grid-column-start: -3;
+        }
+        
+        span{
+            display: flex;
+            justify-content: flex-end;
+            
+            button{
+                background: none;
+                border: none;
+                cursor: pointer;
+                img{
+                    max-width: 4rem;
+                }
+            }
+
+        }
     }
 
 }
