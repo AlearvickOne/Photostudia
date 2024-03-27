@@ -1,54 +1,62 @@
-.sectionQuestionContentList{
-    width: 100%;
-    margin-bottom: 5rem;
+.sectionQuestionContentList {
+  $borderLine: 1px solid black;
 
-    
-    .sectionQuestionsContentFlex{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 5rem 1fr;
-        align-items: center;
+  width: 100%;
+  margin-bottom: 5rem;
 
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
+  &:last-child {
+    border-bottom: $borderLine;
+  }
 
-        .sectionQuestionsContentHead{
-            display: inline-block;
-        }
+  .sectionQuestionsContentFlex {
+    display: grid;
+    grid-template-columns: 35% 1fr 4rem;
+    grid-template-rows: 5rem 1fr;
+    align-items: center;
 
-        .sectionQuestionContentNumber{
-            text-align: left;
-            font-size: 3rem;
-            line-height: 5rem;
-        }
+    border-top: $borderLine;
 
-        .sectionQuestionContentTitle{
-            font-size: 2rem;
-            font-weight: 100;
-            font-variant-caps: all-small-caps;
-            text-align: left;
-        }
-
-        p{
-            text-align: left;
-            grid-row-start: -2;
-            grid-column-start: -3;
-        }
-        
-        span{
-            display: flex;
-            justify-content: flex-end;
-            
-            button{
-                background: none;
-                border: none;
-                cursor: pointer;
-                img{
-                    max-width: 4rem;
-                }
-            }
-
-        }
+    .sectionQuestionContentNumber {
+      text-align: left;
+      font-size: 3rem;
+      line-height: 5rem;
+      color: #aeaeae;
     }
 
+    .sectionQuestionsContentHead {
+      font-size: 2rem;
+      font-weight: 100;
+      font-variant-caps: all-small-caps;
+      text-align: left;
+      line-height: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    .sectionQuestionsContentBody {
+      text-align: left;
+      grid-row-start: -2;
+      grid-column-start: -3;
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+
+      * {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .buttonContainer {
+      display: flex;
+      justify-content: flex-end;
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        img {
+          max-width: 4rem;
+        }
+      }
+    }
+  }
 }
