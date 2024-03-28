@@ -1,5 +1,8 @@
 import { useState } from "react";
 import classesCss from "./sectionQuestionContent.module.scss";
+import animationsCss from "../../_animations/animatons.module.scss";
+
+import { btnMinusImg, btnPlusImg } from "../../imagesAssetsList";
 
 const contents = [
   {
@@ -238,11 +241,11 @@ function QuestionListElement(idText: string, headText: string | JSX.Element, bod
       <h5 className={classesCss.sectionQuestionContentNumber}>{idText}</h5>
 
       <h6 className={classesCss.sectionQuestionsContentHead}>{headText}</h6>
-      {isBtnClick && <div className={classesCss.sectionQuestionsContentBody}>{bodyText}</div>}
+      {isBtnClick && <div className={`${classesCss.sectionQuestionsContentBody} ${animationsCss.openTextAnim}`}>{bodyText}</div>}
 
       <span className={classesCss.buttonContainer}>
         <button type="button" onClick={() => setIsBtnClick(!isBtnClick)}>
-          <img src="src/assets/iconPlayVideo.png" alt="img" />
+          <img src={isBtnClick ? btnMinusImg : btnPlusImg} alt="img" />
         </button>
       </span>
     </li>

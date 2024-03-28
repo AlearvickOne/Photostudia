@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import classesCss from "./header.module.scss";
 
 import headerLogo from "../../assets/head-logo.svg";
-import headerVideo from "../../assets/videos/head-video.mp4";
+import { headerVideo } from "../videosAssetsList";
 
 // Video element background
 const videoEl = (): JSX.Element => {

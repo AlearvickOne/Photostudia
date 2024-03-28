@@ -1,7 +1,13 @@
+// -- react
 import { useState } from "react";
-import classesCss from "./sectionActionListContent.module.scss";
 import QRCode from "qrcode.react";
-import imgActionNotNumber from "../../../assets/SectionActionList/imgActionNotNumber.svg";
+// -- SCSS
+import classesCss from "./sectionActionListContent.module.scss";
+import animationsCss from "../../_animations/animatons.module.scss";
+// -- images
+import { btnMinusImg, btnPlusImg, actionListImgNotNumber } from "../../imagesAssetsList";
+
+// ---------
 
 const contentsForProfessionals = [
   {
@@ -136,7 +142,7 @@ const contentsForProfessionals = [
 
 const contentsForClients = [
   {
-    id: <img src={imgActionNotNumber} alt="icon" />,
+    id: <img src={actionListImgNotNumber} alt="icon" />,
     head: (
       <>
         <p>
@@ -195,11 +201,13 @@ function ContentText(idContent: IdOrImage, headContent: JSX.Element, bodyContent
         <ul className={classesCss.actionListContentTextParent}>
           <li className={classesCss.actionListContentTextChild}>
             <div className={classesCss.numberLi}>{idContent}</div>
-            <button type="button" className={classesCss.buttonOpen} onClick={() => clickedBtn()} />
+            <button type="button" className={classesCss.buttonOpen} onClick={() => clickedBtn()}>
+              <img src={isClickButton ? btnMinusImg : btnPlusImg} alt="img" />
+            </button>
             <span>
               <div className={classesCss.headStaticText}>{headContent}</div>
               {isClickButton && (
-                <div className={`${classesCss.openTextAnim} ${classesCss.bodyDynamicText}`}>
+                <div className={`${animationsCss.openTextAnim} ${classesCss.bodyDynamicText}`}>
                   {bodyContent}
                   {QRVisible !== null && QRVisible}
                 </div>
