@@ -6,7 +6,18 @@ header {
 
     video {
       width: 100%;
-      transform: scale(166.5%, 105%);
+      transform: scale(121.5%, 105%);
+
+      &::after {
+        content: "";
+        background: #aeaeae;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
     }
 
     a,
@@ -17,15 +28,27 @@ header {
   }
 
   .headerTop {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 97%;
+    width: 100%;
 
     display: flex;
     margin: 2.188rem 1.563rem 0 1.25rem;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    z-index: 50;
+
+    .headerTopBackground {
+      content: "";
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.575);
+      width: 100%;
+      height: 210%;
+      top: -2.5rem;
+      left: 0;
+      z-index: -1;
+    }
 
     img {
       max-width: 10rem;
@@ -36,7 +59,7 @@ header {
       list-style-type: none;
 
       li {
-        margin-right: 0.5rem;
+        margin-right: 2rem;
 
         &:last-child {
           margin-right: 0;

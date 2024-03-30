@@ -1,19 +1,31 @@
 import { Link } from "react-router-dom";
 
 import classesCss from "./header.module.scss";
+import animationsCss from "../_animations/animatons.module.scss";
 
 import headerLogo from "../../assets/head-logo.svg";
 import { headerVideo } from "../videosAssetsList";
+import { useEffect, useState } from "react";
 
 // Video element background
-const videoEl = (): JSX.Element => {
+const VideoEl = (): JSX.Element => {
   return <video src={headerVideo} autoPlay muted loop />;
 };
 
 // Upper element header
-const headerTop = (): JSX.Element => {
+const HeaderTopEl = (): JSX.Element => {
+  const [scrollPosY, setScrollPosY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollPosY(window.scrollY);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className={classesCss.headerTop}>
+      {scrollPosY > 500 ? <span className={`${classesCss.headerTopBackground} ${animationsCss.animationOpacity}`} /> : <></>}
       <div className={classesCss.headerLogo}>
         <img src={headerLogo} alt="header logo img" />
       </div>
@@ -47,8 +59,8 @@ export default function Header(): JSX.Element {
   return (
     <header>
       <div className={classesCss.headerBackground}>
-        {videoEl()}
-        {headerTop()}
+        {VideoEl()}
+        {HeaderTopEl()}
 
         <div className={classesCss.headerBottom}>
           <div className={classesCss.headerBottomTitle}>

@@ -4,6 +4,18 @@
   animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+.animationOpacity {
+  animation: animationOpacity 1s both;
+}
+
+.AppearingWithRight {
+  animation: AppearingWithRight 1s both;
+}
+
+.AppearingWithLeft {
+  animation: AppearingWithLeft 1s both;
+}
+
 // ================================
 @keyframes slide-bottom {
   0% {
@@ -13,5 +25,32 @@
   100% {
     transform: translateY(10px);
     opacity: 100%;
+  }
+}
+
+@keyframes animationOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes AppearingWithRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes AppearingWithLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

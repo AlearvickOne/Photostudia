@@ -231,7 +231,9 @@ export default function SectionActionListContent(): JSX.Element {
         </div>
         <div className={classesCss.actionListContent}>
           <hr />
-          {contentsForProfessionals.map((el) => ContentText(el.id, el.head, el.body, el.QRVisible))}
+          {contentsForProfessionals.map((el, i) => (
+            <span key={i}>{ContentText(el.id, el.head, el.body, el.QRVisible)}</span>
+          ))}
         </div>
       </div>
       <div className={classesCss.actionListGrid}>
@@ -240,7 +242,9 @@ export default function SectionActionListContent(): JSX.Element {
         </div>
         <div className={classesCss.actionListContent}>
           <hr />
-          {contentsForClients.map((el) => ContentText(el.id, el.head, el.body, el.QRVisible))}
+          {contentsForClients.map((el, i) => (
+            <span key={i}>{ContentText(el.id, el.head, el.body, el.QRVisible)}</span>
+          ))}
         </div>
       </div>
     </section>

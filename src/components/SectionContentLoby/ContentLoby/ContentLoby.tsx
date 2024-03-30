@@ -1,11 +1,11 @@
 import { IContent } from "../../interfaces";
 import classesCss from "./contentLoby.module.scss";
-
+import animationsCss from "../../_animations/animatons.module.scss";
 import { Link } from "react-router-dom";
 
-function contentInformation(contentTitle: string, contentText: string, contentPriceText: string): JSX.Element {
+function contentInformation(contentTitle: string, contentText: string, contentPriceText: string, rev: boolean): JSX.Element {
   return (
-    <div className={classesCss.contentInformation}>
+    <div className={`${classesCss.contentInformation} ${rev ? animationsCss.AppearingWithLeft : animationsCss.AppearingWithRight}`}>
       <div className={classesCss.contentTitle} dangerouslySetInnerHTML={{ __html: contentTitle }} />
       <div className={classesCss.contentText} dangerouslySetInnerHTML={{ __html: contentText }} />
 
@@ -20,16 +20,16 @@ function contentInformation(contentTitle: string, contentText: string, contentPr
   );
 }
 
-function contentPictures(photosElements: { image: string }[]): JSX.Element {
+function contentPictures(photosElements: { image: string }[], rev: boolean): JSX.Element {
   return (
-    <div className={classesCss.contentPictures}>
+    <div className={`${classesCss.contentPictures} ${rev ? animationsCss.AppearingWithRight : animationsCss.AppearingWithLeft}`}>
       <img className={classesCss.bigImg} src={photosElements[0].image} alt="pic" />
       <div className={classesCss.lowImgs}>
         {photosElements.map((el, i) => {
           if (i !== 0)
             return (
-              <div className={classesCss.lowImg}>
-                <img key={i} src={el.image} alt="lowImage" />
+              <div key={i} className={classesCss.lowImg}>
+                <img src={el.image} alt="lowImage" />
               </div>
             );
         })}
@@ -39,8 +39,9 @@ function contentPictures(photosElements: { image: string }[]): JSX.Element {
 }
 
 export default function ContentLoby({ contentTitle, contentText, contentPriceText, reverseElements, photosElements }: IContent): JSX.Element {
-  const contInf = contentInformation(contentTitle, contentText, contentPriceText!);
-  const contPic = contentPictures(photosElements);
+  const rev = reverseElements;
+  const contInf = contentInformation(contentTitle, contentText, contentPriceText!, rev);
+  const contPic = contentPictures(photosElements, rev);
 
   return (
     <>

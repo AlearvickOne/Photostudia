@@ -253,5 +253,11 @@ function QuestionListElement(idText: string, headText: string | JSX.Element, bod
 }
 
 export const SectionQustionsContent = () => {
-  return <ul className={classesCss.sectionQuestionContentList}>{contents.map((el) => QuestionListElement(el.id, el.head, el.body))}</ul>;
+  return (
+    <ul className={classesCss.sectionQuestionContentList}>
+      {contents.map((el, i) => (
+        <span key={i}>{QuestionListElement(el.id, el.head, el.body)}</span>
+      ))}
+    </ul>
+  );
 };

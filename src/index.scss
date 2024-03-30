@@ -2,11 +2,10 @@
 
 $margin_wrap: 7vh;
 
-:root{
+:root {
   max-width: 1366px;
   min-height: 515px;
   margin: 0 auto;
-  
 
   @media (width: 1366px) {
     max-width: 1250px;
@@ -30,20 +29,21 @@ body {
   overflow-x: hidden;
   position: relative;
 
-  &::before, &::after{
-    content: '';
+  &::before,
+  &::after {
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     width: 1000%;
     background-color: rgb(224, 224, 224);
     background-size: cover;
-    z-index: 1;
+    z-index: 999;
   }
-  &::before{
+  &::before {
     left: 110%;
   }
-  &::after{
+  &::after {
     right: 110%;
   }
 
