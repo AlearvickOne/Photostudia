@@ -78,11 +78,12 @@ import actionListImgNotNumber from "../assets/SectionActionList/imgActionNotNumb
 
 /*==========================================================================*/
 /* Section Services Folder */
-import businessImg from "../assets/sectionServices/businessPhoto.svg";
-import commercialImg from "../assets/sectionServices/commercialShooting.svg";
-import funnyImg from "../assets/sectionServices/funnyPhoto.svg";
-import objectsImg from "../assets/sectionServices/objectsPhoto.svg";
-import turnkeyImg from "../assets/sectionServices/turnkeyPhoto.svg";
+import businessServiceImg from "../assets/sectionServices/businessPhoto.svg";
+import commercialServiceImg from "../assets/sectionServices/commercialShooting.svg";
+import funnyServiceImg from "../assets/sectionServices/funnyPhoto.svg";
+import objectsServiceImg from "../assets/sectionServices/objectsPhoto.svg";
+import turnkeyServiceImg from "../assets/sectionServices/turnkeyPhoto.svg";
+import otherServicesImg from "../assets/sectionServices/otherPhoto.svg";
 
 /*==========================================================================*/
 // ===============================================================================================================================
@@ -156,10 +157,11 @@ export {
   actionListImgNotNumber,
   /*==========================================================================*/
   /* Section Services Folder */
-  businessImg,
-  commercialImg,
-  funnyImg,
-  objectsImg,
-  turnkeyImg,
+  businessServiceImg,
+  commercialServiceImg,
+  funnyServiceImg,
+  objectsServiceImg,
+  turnkeyServiceImg,
+  otherServicesImg,
   /*==========================================================================*/
 };
