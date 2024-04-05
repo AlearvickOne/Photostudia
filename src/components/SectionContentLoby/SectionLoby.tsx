@@ -1,5 +1,5 @@
 import ContentLoby from "./ContentLoby/ContentLoby.tsx";
-import { contents } from "./content.ts";
+import { contents } from "./Contents.tsx";
 import classesCss from "./sectionLoby.module.scss";
 
 export default function SectionLoby(): JSX.Element {

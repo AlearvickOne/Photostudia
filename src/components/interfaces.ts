@@ -1,7 +1,7 @@
 interface IContent {
-  contentTitle: string;
-  contentText: string;
-  contentPriceText?: string;
+  contentTitle: JSX.Element;
+  contentText: JSX.Element;
+  contentPriceText?: JSX.Element;
   reverseElements: boolean;
   photosElements: { image: string }[];
 }
