@@ -1,3 +1,9 @@
+import { contentImg_1, contentImg_2, contentImg_3, contentImg_4, contentImg_5, contentImg_6, contentImg_7 } from "../imagesAssetsList";
+import { cycloramaImg_1, cycloramaImg_2, cycloramaImg_3, cycloramaImg_4, cycloramaImg_5, cycloramaImg_6, cycloramaImg_7 } from "../imagesAssetsList";
+import { interiorImg_1, interiorImg_2, interiorImg_3, interiorImg_4, interiorImg_5, interiorImg_6, interiorImg_7 } from "../imagesAssetsList";
+import { loftImg_1, loftImg_2, loftImg_3, loftImg_4, loftImg_5, loftImg_6, loftImg_7 } from "../imagesAssetsList";
+import { rainImg_1, rainImg_2, rainImg_3, rainImg_4, rainImg_5, rainImg_6, rainImg_7 } from "../imagesAssetsList";
+
 export const contents = [
   {
     contentTitle: <h2>КОНТЕНТ</h2>,
@@ -30,15 +36,13 @@ export const contents = [
     ),
     isReversed: false,
     photos: [
-      {
-        image: "/src/assets/contents/content/image_2.svg",
-      },
-      { image: "/src/assets/contents/content/image_2.svg" },
-      { image: "/src/assets/contents/content/image_3.svg" },
-      { image: "/src/assets/contents/content/image_4.svg" },
-      { image: "/src/assets/contents/content/image_5.svg" },
-      { image: "/src/assets/contents/content/image_6.svg" },
-      { image: "/src/assets/contents/content/image_7.svg" },
+      { image: contentImg_1 },
+      { image: contentImg_2 },
+      { image: contentImg_3 },
+      { image: contentImg_4 },
+      { image: contentImg_5 },
+      { image: contentImg_6 },
+      { image: contentImg_7 },
     ],
   },
   {
@@ -77,13 +81,13 @@ export const contents = [
     ),
     isReversed: true,
     photos: [
-      { image: "/src/assets/contents/rain/image_1.svg" },
-      { image: "/src/assets/contents/rain/image_2.svg" },
-      { image: "/src/assets/contents/rain/image_3.svg" },
-      { image: "/src/assets/contents/rain/image_4.svg" },
-      { image: "/src/assets/contents/rain/image_5.svg" },
-      { image: "/src/assets/contents/rain/image_6.svg" },
-      { image: "/src/assets/contents/rain/image_7.svg" },
+      { image: cycloramaImg_1 },
+      { image: cycloramaImg_2 },
+      { image: cycloramaImg_3 },
+      { image: cycloramaImg_4 },
+      { image: cycloramaImg_5 },
+      { image: cycloramaImg_6 },
+      { image: cycloramaImg_7 },
     ],
   },
   {
@@ -119,13 +123,13 @@ export const contents = [
     ),
     isReversed: false,
     photos: [
-      { image: "/src/assets/contents/cyclorama/image_1.svg" },
-      { image: "/src/assets/contents/cyclorama/image_2.svg" },
-      { image: "/src/assets/contents/cyclorama/image_3.svg" },
-      { image: "/src/assets/contents/cyclorama/image_4.svg" },
-      { image: "/src/assets/contents/cyclorama/image_5.svg" },
-      { image: "/src/assets/contents/cyclorama/image_6.svg" },
-      { image: "/src/assets/contents/cyclorama/image_7.svg" },
+      { image: interiorImg_1 },
+      { image: interiorImg_2 },
+      { image: interiorImg_3 },
+      { image: interiorImg_4 },
+      { image: interiorImg_5 },
+      { image: interiorImg_6 },
+      { image: interiorImg_7 },
     ],
   },
   {
@@ -163,13 +167,13 @@ export const contents = [
     ),
     isReversed: true,
     photos: [
-      { image: "/src/assets/contents/interior/image_1.svg" },
-      { image: "/src/assets/contents/interior/image_2.svg" },
-      { image: "/src/assets/contents/interior/image_3.svg" },
-      { image: "/src/assets/contents/interior/image_4.svg" },
-      { image: "/src/assets/contents/interior/image_5.svg" },
-      { image: "/src/assets/contents/interior/image_6.svg" },
-      { image: "/src/assets/contents/interior/image_7.svg" },
+      { image: loftImg_1 },
+      { image: loftImg_2 },
+      { image: loftImg_3 },
+      { image: loftImg_4 },
+      { image: loftImg_5 },
+      { image: loftImg_6 },
+      { image: loftImg_7 },
     ],
   },
   {
@@ -208,13 +212,13 @@ export const contents = [
     ),
     isReversed: false,
     photos: [
-      { image: "/src/assets/contents/loft/image_1.svg" },
-      { image: "/src/assets/contents/loft/image_2.svg" },
-      { image: "/src/assets/contents/loft/image_3.svg" },
-      { image: "/src/assets/contents/loft/image_4.svg" },
-      { image: "/src/assets/contents/loft/image_5.svg" },
-      { image: "/src/assets/contents/loft/image_6.svg" },
-      { image: "/src/assets/contents/loft/image_7.svg" },
+      { image: rainImg_1 },
+      { image: rainImg_2 },
+      { image: rainImg_3 },
+      { image: rainImg_4 },
+      { image: rainImg_5 },
+      { image: rainImg_6 },
+      { image: rainImg_7 },
     ],
   },
 ];
